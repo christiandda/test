@@ -1,7 +1,7 @@
 import streamlit as st
 import os
 import sys
-from utils import recommend
+
 from PIL import Image
 import pickle
 import requests
@@ -13,10 +13,10 @@ import glob
 import io
 import codecs
 from streamlit_option_menu import option_menu
-from scripts import un_based_rate
-from scripts import un_based_feat
-from scripts import sup_id
-from scripts import about
+
+from utils import formulas
+
+
 
 PROJECT_ROOT = os.path.abspath(os.path.join(
                   os.path.dirname(__file__), 
@@ -42,3 +42,9 @@ def shops_info():
         font-size:40px ; font-family: 'Cooper Black'; color: #FF9633;} 
         </style> """, unsafe_allow_html=True)
     st.write("Here we can see the informacion fo all driver and add new shops")
+
+    # create a sample dataframe
+    df = formulas.df_shops()
+
+    # display the dataframe in Streamlit
+    st.dataframe(df)

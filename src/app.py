@@ -7,6 +7,7 @@ from scripts import heatmap
 from scripts import orders
 
 
+
 st.set_page_config(layout='wide')
 
 # Defines a sidebar menu using the st.sidebar function from the Streamlit library
