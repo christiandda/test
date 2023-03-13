@@ -1,0 +1,7 @@
+order_id,driver_id,restaurant_id,customer_name,customer_address,order_time,delivery_time,total_amount,order_status
+1,765A,4c321c9816adc9281693c19c,Tom,León Felipe 16,2023-03-13 12:40:00,2023-03-13 13:10:00,40.0,delivered
+2,93DF,593be9b516fa0435e49bbc2f,Jack,Payaso Fofó 2,2023-03-13 11:20:00,2023-03-13 11:50:00,25.0,delivered
+3,5EDD,595bc8e52bf9a971a2316f62,Jane,Cenicienta 2,2023-03-13 17:30:00,2023-03-13 18:00:00,60.0,delivered
+4,7EF0,4adcda3af964a520353d21e3,Tomas,Gal 4,2023-03-13 12:47:12,2023-03-13 12:47:12,50.0,picking up
+5,4EA0,59b4dd5da8eb604056db7ba6,,,2023-03-13 12:56:56,2023-03-13 12:56:56,0.0,picking up
+6,C6B7,5004217de4b0524582e67aa0,daniel,blabh bah,2023-03-13 13:08:38,2023-03-13 13:08:38,20.0,picking up

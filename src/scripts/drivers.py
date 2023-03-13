@@ -50,14 +50,19 @@ def drivers_info():
     st.dataframe(df)
 
     user_input_id  = st.text_input("Drivers Id?")
-    user_input_lat  = st.text_input("What is the latitude?")
+    user_input_lat = st.text_input("What is the latitude?")
     user_input_lon = st.text_input("What is the longitude?")
+
+    if user_input_lat and user_input_lon:
+        # Convert the inputs to floats
+        user_input_lat = float(user_input_lat)
+        user_input_lon = float(user_input_lon)
     user_input_disp = st.selectbox("What is the disponibility", ["True", "False"])
 
 
-    criteria_selected = user_input_id and user_input_lat and user_input_lon and user_input_disp
+    criteria_selected = user_input_id and user_input_disp
 
     if st.button('Insert information', disabled=not criteria_selected):
         with st.spinner('Inserting...'):
-            formulas.insert_infor_drivers(user_input_id,user_input_lat,user_input_lon,user_input_disp)
+            formulas.insert_infor_drivers(user_input_id,user_input_disp,user_input_lat,user_input_lon)
             st.write("Done")
